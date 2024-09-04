@@ -132,6 +132,10 @@
   border-radius: .4rem;
 }
 
+.detail-left-section .basic-btn.preview-btn {
+  color: #141414;
+}
+
 
 
 
@@ -224,7 +228,6 @@
   }
 
   .detail-left-section .basic-btn.preview-btn {
-    color: #141414;
     order: 5;
     width: 100%;
     font-size: 1.1rem;

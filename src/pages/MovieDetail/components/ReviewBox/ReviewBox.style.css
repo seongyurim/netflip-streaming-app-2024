@@ -30,6 +30,8 @@
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: .3rem;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .review-rating {
