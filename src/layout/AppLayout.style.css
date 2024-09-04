@@ -193,4 +193,16 @@
   .nav-list li {
     display: none;
   }
+
+  .nav-list li:nth-of-type(2) {
+    display: block;
+  }
+  
+  .nav-list li+li {
+    margin-left: 0;
+  }
+
+  .logo {
+    margin-right: 1rem;
+  }
 }

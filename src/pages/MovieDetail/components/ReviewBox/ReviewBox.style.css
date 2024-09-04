@@ -138,6 +138,7 @@
     flex-wrap: wrap;
     gap: .5rem;
     padding: 1rem;
+    margin: 15px 0;
     align-items: center;
   }
 
@@ -181,6 +182,19 @@
   .read-more-btn-review,
   .read-more-btn-arrow {
     font-size: .875rem;
+  }
+
+  .read-more-btn-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .read-more-btn-review > .read-more-btn-arrow {
+    order: 2;
+    margin-right: 0;
   }
 
   .review-author-date {

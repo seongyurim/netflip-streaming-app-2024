@@ -63,9 +63,9 @@ const DetailBanner = ({ movie }) => {
             <div className='detail-genre-box'>
               {movie?.genres.map((item, idx) => <div className='detail-genre' key={idx}>{item.name}</div>)}
             </div>
-            <button className='basic-btn preview-btn'>
+            <button className='basic-btn preview-btn' onClick={() => setModalShow(true)}>
               <FontAwesomeIcon icon={faPlay} className='btn-icon'/>
-              <span className='preview-btn-text' onClick={() => setModalShow(true)}>예고편</span>
+              <span className='preview-btn-text'>예고편</span>
             </button>
           </div>
           <div className='detail-right-section'>
