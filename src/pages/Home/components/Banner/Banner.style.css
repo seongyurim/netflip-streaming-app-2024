@@ -209,9 +209,16 @@
     width: 100%;
     padding: 2rem;
     box-sizing: border-box;
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
   }
 
   .item-title {
     font-size: 3rem;
+  }
+
+  .banner-btns > button {
+    width: 100%;
   }
 }
