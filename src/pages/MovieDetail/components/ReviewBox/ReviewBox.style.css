@@ -80,8 +80,10 @@
 }
 
 .review-author-content {
+  box-sizing: border-box;
   flex-basis: auto;
   flex-grow: 1;
+  max-width: 100%;
 }
 
 .review-author-date {
