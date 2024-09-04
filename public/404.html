@@ -7,9 +7,13 @@
 </head>
 <body>
     <script>
-        // 현재 경로를 확인하고 이미 올바른 경로로 리다이렉트 된 상태가 아니라면 리디렉션
-        if (!window.location.pathname.startsWith('/netflip-streaming-app-2024/')) {
-            window.location.href = '/netflip-streaming-app-2024' + window.location.pathname + window.location.search;
+        // GitHub Pages에서 올바른 경로로 리디렉션
+        var redirectTo = '/netflip-streaming-app-2024' + window.location.pathname + window.location.search;
+        
+        // 현재 경로가 루트가 아닌 경우에만 리디렉션을 수행
+        if (window.location.pathname !== '/netflip-streaming-app-2024/' && 
+            window.location.pathname !== '/netflip-streaming-app-2024') {
+            window.location.replace(redirectTo);
         }
     </script>
 </body>
