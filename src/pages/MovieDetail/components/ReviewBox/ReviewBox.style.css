@@ -84,6 +84,9 @@
   flex-basis: auto;
   flex-grow: 1;
   max-width: 100%;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .review-author-date {
