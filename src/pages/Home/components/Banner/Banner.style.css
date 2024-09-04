@@ -99,6 +99,10 @@
   background-color: rgba(167, 167, 167, .6);
 }
 
+.banner-btns .basic-btn.preview-btn {
+  color: #141414;
+}
+
 .btn-icon {
   font-size: 1.2rem;
   margin-right: 10px;
@@ -203,6 +207,8 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .item-info-area {
     width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
   }
 
   .item-title {

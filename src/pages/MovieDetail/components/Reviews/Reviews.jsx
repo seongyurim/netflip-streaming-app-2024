@@ -6,7 +6,7 @@ import './Reviews.style.css';
 
 const Reviews = ({ id }) => {
   const { data, isLoading, isError, error } = useMovieReviewQuery(id);
-  console.log("useMovieReviewQuery's data:", data);
+  // console.log("useMovieReviewQuery's data:", data);
 
   if (isLoading) {
     return <LoadingSpinner />

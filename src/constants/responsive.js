@@ -10,16 +10,19 @@ export const responsive = {
     // carousel-container's height: 400px
     breakpoint: { max: 1500, min: 1024 },
     items: 5,
+    slidesToSlide: 3
   },
   tablet: {
     // carousel-container's height: 250px
     breakpoint: { max: 1024, min: 464 },
-    items: 3
+    items: 3,
+    slidesToSlide: 3
   },
   mobile: {
     // carousel-container's height: 200px
     breakpoint: { max: 464, min: 0 },
-    items: 3
+    items: 3,
+    slidesToSlide: 3
   }
 };
 

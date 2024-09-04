@@ -21,7 +21,7 @@ const Banner = () => {
 
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
   const mainItem = data?.results[randomIndex];
-  console.log("Banner's mainItem:", mainItem);
+  // console.log("Banner's mainItem:", mainItem);
   const posterUrl = `https://www.themoviedb.org/t/p/w1920_and_h1080_multi_faces${mainItem?.backdrop_path}`;
 
   const { data:genreData } = useMovieGenreQuery();

@@ -33,9 +33,9 @@
 }
 
 .review-rating {
-  align-items: center;
   margin-top: .3rem;
   position: relative;
+  align-items: center;
 }
 
 .star-wrapper {
@@ -75,9 +75,6 @@
   margin-left: 5px;
   line-height: 1em;
   vertical-align: middle;
-  position: absolute;
-  right: -16px;
-  top: 2.3px;
 }
 
 .review-author-content {
