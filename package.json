@@ -51,5 +51,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://seongyurim.github.io/netflip-streaming-app-2024"
+  "homepage": "https://seongyurim.github.io/netflip-streaming-app-2024",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
