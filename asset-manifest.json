@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/netflip-streaming-app-2024/static/css/main.206c0d9c.css",
-    "main.js": "/netflip-streaming-app-2024/static/js/main.2c1cc42f.js",
+    "main.css": "/netflip-streaming-app-2024/static/css/main.b8b71133.css",
+    "main.js": "/netflip-streaming-app-2024/static/js/main.f167946f.js",
     "static/js/453.7cf78889.chunk.js": "/netflip-streaming-app-2024/static/js/453.7cf78889.chunk.js",
     "static/media/revicons.eot": "/netflip-streaming-app-2024/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/netflip-streaming-app-2024/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/netflip-streaming-app-2024/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/netflip-streaming-app-2024/index.html",
-    "main.206c0d9c.css.map": "/netflip-streaming-app-2024/static/css/main.206c0d9c.css.map",
-    "main.2c1cc42f.js.map": "/netflip-streaming-app-2024/static/js/main.2c1cc42f.js.map",
+    "main.b8b71133.css.map": "/netflip-streaming-app-2024/static/css/main.b8b71133.css.map",
+    "main.f167946f.js.map": "/netflip-streaming-app-2024/static/js/main.f167946f.js.map",
     "453.7cf78889.chunk.js.map": "/netflip-streaming-app-2024/static/js/453.7cf78889.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.206c0d9c.css",
-    "static/js/main.2c1cc42f.js"
+    "static/css/main.b8b71133.css",
+    "static/js/main.f167946f.js"
   ]
 }
