@@ -98,6 +98,11 @@
 }
 
 @media (max-width: 767px) {
+  .movie-card-container:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
   .card-overlay {
     display: none;
   }

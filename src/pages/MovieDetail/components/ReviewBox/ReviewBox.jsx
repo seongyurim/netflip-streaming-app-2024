@@ -54,21 +54,15 @@ const ReviewBox = ({ review }) => {
         );
       }
     }
-    return <span>{stars}</span>
+    return <span className='star-whole-wrapper'>{stars}</span>
   };
-
 
   return (
     <div className='review-box-container'>
       <div className='review-author-img' style={{backgroundImage: `url(${profileImg})`}}></div>
       <div className='review-author-info'>
         <div className='review-author-id'>{review.author}</div>
-        {review.author_details.rating && (
-          <span className='review-rating'>
-            {renderStars(review.author_details.rating)}
-            <span className='reiview-rating-score'>{review.author_details.rating}</span>
-          </span>
-        )}
+        <div className='review-created-at'>{formattedCreatedDate}</div>
       </div>
       <div className='review-author-content'>
         {isExpanded ? review?.content : truncateText(review?.content, REVIEW_WORD_LIMIT)}
@@ -81,18 +75,14 @@ const ReviewBox = ({ review }) => {
           </div>
         )}
       </div>
-      <div className='review-author-date'>
-        <div className='review-created-at'>
-          <div className='review-date-desc'>Created at</div>
-          {formattedCreatedDate}
-        </div>
-        {areDatesDifferent && (
-          <div className='review-updated-at'>
-            <div className='review-date-desc'>Updated at</div>
-            {formattedUpdatedDate}
-            </div>
+        {review.author_details.rating && (
+          <div className='review-author-rating'>
+            <span className='review-rating'>
+              {renderStars(review.author_details.rating)}
+              <span className='reiview-rating-score'>{review.author_details.rating}</span>
+            </span>
+          </div>
         )}
-      </div>
     </div>
   );
 };
