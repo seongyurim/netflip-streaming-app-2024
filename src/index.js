@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const queryClient = new QueryClient();
 root.render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter basename="/netflip-streaming-app-2024">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </QueryClientProvider>
