@@ -21,7 +21,7 @@ const PreviewModal = ({ show, onHide, movie }) => {
     },
   };
 
-  const { data, isLoading, isError, error } = useMoviePreviewQuery(movie.id);
+  const { data, isLoading, isError, error } = useMoviePreviewQuery(movie?.id || null);
   // console.log("useMoviePreviewQuery's data:", data);
 
   // 트랜지션 동작 이후에 DOM에서 요소 추가/제거

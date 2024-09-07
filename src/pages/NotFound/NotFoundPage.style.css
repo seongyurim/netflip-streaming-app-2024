@@ -1,6 +1,7 @@
 .not-found-container {
   font-size: 2rem;
   line-height: 1.4;
+  text-align: center;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -20,7 +21,7 @@
 
 .not-found-movie-img::before {
   content: '';
-  background: rgba(20, 20, 20, .8);
+  background: rgba(20, 20, 20, .7);
   position: absolute;
   left: 0;
   height: inherit;
@@ -43,12 +44,11 @@
 }
 
 .not-found-txt-area {
-  width: 80%;
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 .not-found-icon {
@@ -67,6 +67,7 @@
 }
 
 .not-found-desc {
+  font-size: 2rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, .7);
   text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
@@ -79,7 +80,7 @@
   background-color: rgba(255, 255, 255, .7);
   border-radius: .375rem;
   padding: 1.5rem 0;
-  width: 40%;
+  width: 30%;
   margin-top: 2rem;
   transition: all .4s ease;
 }
@@ -94,7 +95,6 @@
   right: 0;
   bottom: 0;
   margin: 2.5vw 4.5vw;
-  margin-right: 6rem;
   font-size: 1.2rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
   opacity: .7;
@@ -109,4 +109,111 @@
   color: #fff;
   opacity: 1;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+
+
+
+/********** 1. 작은 태블릿 및 대형 스마트폰 **********/
+@media (max-width: 767px) {
+  .not-found-logo {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .not-found-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .not-found-title {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+  }
+  
+  .not-found-desc {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .not-found-home-btn {
+    width: calc(100% - 2rem);
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 1.1rem 0;
+    margin-top: 1rem;
+    border-radius: .2rem;
+    background-color: #fff;
+  }
+
+  .not-found-movie-info {
+    margin: 1rem;
+    font-size: .875rem;
+  }
+
+  .not-found-movie-info > em {
+    font-weight: 500;
+  }
+}
+
+/********** 2. 태블릿 **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .not-found-icon {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .not-found-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .not-found-desc {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .not-found-home-btn {
+    font-size: 1.5rem;
+    width: 50%;
+    margin-top: 2rem;
+    background-color: #fff;
+  }
+
+  .not-found-movie-info {
+    font-size: 1rem;
+  }
+}
+
+/********** 3. 작은 노트북 및 데스크탑 **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .not-found-logo,
+  .not-found-movie-info {
+    margin: 2vw;
+  }
+
+  .not-found-icon {
+    font-size: 7rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .not-found-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .not-found-desc {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+  
+  .not-found-home-btn {
+    font-size: 1.5rem;
+    width: 40%;
+    margin-top: 2rem;
+  }
+
+  .not-found-movie-info {
+    font-size: 1rem;
+  }
 }

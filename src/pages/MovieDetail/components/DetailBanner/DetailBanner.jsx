@@ -5,19 +5,20 @@ import { getYear } from '../../../../utils/dateUtil';
 import { truncateText } from '../../../../utils/textUtil';
 import { WORD_LIMIT } from '../../../../constants/constants';
 import PreviewModal from '../../../../common/PreviewModal/PreviewModal';
-import LoadingSpinner from '../../../../common/LoadingSpinner/LoadingSpinner';
 import './DetailBanner.style.css';
 
-const DetailBanner = ({ movie }) => {
+const DetailBanner = ({ movie, setIsImageLoad }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTruncable, setIstruncable] = useState(false);
   const [modalShow, setModalShow] = useState(false);
-  const [isImageLoad, setIsImageLoad] = useState(false);
 
   useEffect(() => {
     if (movie && movie.overview) {
       const words = movie.overview.split(' ');
       setIstruncable(words.length > WORD_LIMIT);
+    }
+    else {
+      setIstruncable(false);
     }
   }, [movie]);
 
@@ -27,7 +28,6 @@ const DetailBanner = ({ movie }) => {
 
   return (
     <div className='movie-detail-banner-container'>
-      {(!isImageLoad) && <LoadingSpinner />}
       <div className='detail-bg-wrapper'>
         <div className='detail-bg' style={{backgroundImage: `url('https://www.themoviedb.org/t/p/w1920_and_h1080_multi_faces${movie?.backdrop_path}')`}}></div>
         <div className='detail-article'>
@@ -53,7 +53,7 @@ const DetailBanner = ({ movie }) => {
               <p className='detail-tagline'>{movie?.tagline}</p>
             )}
             <p className='detail-overview'>
-              {isExpanded ? movie?.overview : truncateText(movie?.overview)}
+              {isExpanded ? movie?.overview : (movie?.overview ? truncateText(movie?.overview): '')}
               {isTruncable && (
                 <span onClick={() => setIsExpanded(!isExpanded)} className='read-more-btn'>
                   {isExpanded ? '접기' : '더보기'}

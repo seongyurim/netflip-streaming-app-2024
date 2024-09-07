@@ -86,9 +86,34 @@
   }
 
   .modal-close-btn {
+    width: 20px;
+    height: 20px;
     font-size: 1.5rem;
-    right: 20px;
-    top: -40px;
+    position: fixed;
+    left: 50%;
+    top: 105%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #141414;
+    box-shadow: 0 0 3rem #000;
+  }
+
+  .modal-error-wrapper {
+    max-width: 80%;
+    padding: 1.2rem;
+    border-radius: .3rem;
+    line-height: 1.4;
+    gap: .6rem;
+  }
+  
+  .modal-error-icon {
+    font-size: 2rem;
+  }
+  
+  .modal-error-txt {
+    font-size: .9rem;
   }
 }
 

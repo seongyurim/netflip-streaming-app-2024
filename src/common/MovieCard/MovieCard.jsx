@@ -13,11 +13,16 @@ const MovieCard = ({ movie, className = '' }) => {
   const { data:genreData } = useMovieGenreQuery();
   // console.log("MovieCard's genre:", genreData);
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    navigate(`/movies/${movie.id}`);
+  }
+
   return (
     <div
       style={{backgroundImage: `url(${posterUrl})`}}
       className={`movie-card-container ${className}`}
-      onClick={() => navigate(`/movies/${movie.id}`)}
+      onClick={handleClick}
     >
       <div className='card-overlay'>
         <div className='card-overlay-top'>

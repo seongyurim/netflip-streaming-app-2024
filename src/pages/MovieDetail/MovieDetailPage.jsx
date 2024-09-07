@@ -13,9 +13,10 @@ const MovieDetailPage = () => {
   // console.log("MovieDetailPage's id:", id);
   const { data, isLoading, isError, error } = useMovieDetailQuery(id);
   // console.log("useMovieDetailQuery's data:", data);
+  const [isImageLoad, setIsImageLoad] = useState(false);
 
-  if (isLoading) {
-    return <LoadingSpinner />
+  if (isLoading && !isImageLoad) {
+    return <LoadingSpinner />;
   }
 
   if (isError) {
@@ -24,7 +25,7 @@ const MovieDetailPage = () => {
 
   return (
     <div className='movie-detail-container'>
-      <DetailBanner movie={data} />
+      <DetailBanner movie={data} setIsImageLoad={setIsImageLoad}/>
       <div className='movie-bottom-info'>
         <RelatedMoviesSlide id={id} />
         <Reviews id={id} />
