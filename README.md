@@ -19,3 +19,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 ## 📍주요기능
 
 ## 📍상세기능
+Home
+Movie
+MovieDetail
+NotFound
