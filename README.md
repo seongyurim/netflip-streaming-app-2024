@@ -21,19 +21,19 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 ## 📍상세기능
 ### 1) Home
 #### 1-1) Banner: 단일 영화 아이템 소개
-- `usePopularMoviesQuery`: 인기영화 리스트를 가져옵니다.
+- **`usePopularMoviesQuery`**: 인기영화 리스트를 가져옵니다.
 - 각 페이지에는 20개의 영화가 있고, 이중 하나를 랜덤으로 선택합니다.
 - 선택된 영화의 제목, 포스터사진, 소개글, 장르를 가져와서 렌더링합니다.
 - 링크로는 예고편과 상세정보가 있습니다.
 	- 예고편: 선택된 영화의 예고편을 모달창을 통해 바로 시청할 수 있습니다.
 	- 상세정보: 선택된 영화의 id가 URL 경로에 포함되어 상세정보 페이지로 이동합니다.
 
-#### 1-2) PreviewModal의 작동원리
+#### 1-2) PreviewModal: 유튜브 예고편 시청
 - Banner → Preview 컴포넌트로 상태 전달
 	- `movie`: 영화 정보 객체
 	- `show`: `modalShow(false)`
 	- `onHide`: `() => setModalShow(false)`
-- `useMoviePreviewQuery`: movie의 id로 특정 영화의 예고편을 가져옵니다.
+- **`useMoviePreviewQuery`**: movie의 id로 특정 영화의 예고편을 가져옵니다.
 - `show`가 `true`인 경우 지역 상태 스위칭
 	- `isMount`를 `true`로 변경: 컴포넌트를 조건부 렌더링하는 상태
 	- `isVisible`를 `true`로 변경: 컴포넌트가 `isMount`에 의해 DOM에 추가된 뒤 트랜지션을 지연 동작시키는 상태
