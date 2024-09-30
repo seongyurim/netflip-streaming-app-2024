@@ -65,9 +65,9 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 	- `isVisible`를 `true`로 변경: 컴포넌트가 `isMount`에 의해 DOM에 추가된 뒤 트랜지션을 지연동작시키는 상태
 - 모달창의 외부에 반투명 블랙 배경이 오버레이되도록 합니다. 오버레이를 클릭하면 모달이 사라집니다.
 - API를 호출한 이후 데이터 유무에 따른 렌더링
-	- 데이터가 있으면: 유튜브 컴포넌트를 이용해 예고편 동영상을 렌더링합니다.
+	- 데이터가 있으면: 유튜브 컴포넌트(react-youtube)를 이용해 예고편 동영상을 렌더링합니다.
 	- 데이터가 없으면: 예고편 정보가 존재하지 않는다는 메세지를 렌더링합니다.
-	- [react-youtube](https://www.npmjs.com/package/react-youtube)에는 API 호출로 받은 데이터의 key값을 전달하면 영상을 찾아와 보여줄 수 있습니다.
+	- [react-youtube](https://www.npmjs.com/package/react-youtube): API 호출로 받은 데이터의 key값을 전달하면 영상을 찾아와 보여줄 수 있습니다.
 
 #### 2-3) MovieSlides: 여러 테마의 영화 리스트 슬라이드
 - 인기 영화, 높은 평점 영화, 개봉 예정 영화, 현재 상영중인 영화 리스트를 보여줍니다.
@@ -76,7 +76,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 	- `title`: 리스트의 제목
 	- `movies`: 영화 정보 리스트
 	- `responsive`: 슬라이더 반응형 객체
-- 영화 슬라이더는 `react-multi-carousel`을 통해 구현합니다.
+- 영화 슬라이더는 [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel)을 통해 구현합니다.
 - 슬라이더를 구성하는 각 영화 정보들은 `MovieCard` 컴포넌트를 통해 렌더링됩니다.
 	- `movie`: 단일 영화 정보
 - 영화카드에는 포스터가 보이고, 포스터를 호버하면 간단한 영화 정보를 확인할 수 있습니다.
@@ -122,8 +122,9 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
 	- `genreResponsive`: 캐러셀이 사용할 장르 슬라이더 전용 반응형 데이터
 	- `selectedGenre`: 선택된 장르를 저장하는 상태
 	- `setSelectedGenre`: 선택된 장르 설정
- - 장르카드를 클릭하면 `useNavigate`를 통해 URL에 장르값을 반영합니다.
- - 선택된 장르는 상태에 저장하고 CSS 선택자를 부여하여 UI를 강조합니다.
+- 장르카드를 클릭하면 `useNavigate`를 통해 URL에 장르값을 반영합니다.
+- 선택된 장르는 상태에 저장하고 CSS 선택자를 부여하여 UI를 강조합니다.
+- 장르 슬라이더도 영화 슬라이더와 마찬가지로 react-multi-carousel를 통해 구현합니다.
 
 ### 4) MovieDetail
 ### 5) NotFound
