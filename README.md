@@ -29,7 +29,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 - 사용자가 현재 위치한 내비게이션 항목에만 CSS 선택자를 부여해서 강조합니다.
 - 이를 위해 현재 위치 경로와 프로퍼티의 URL 정보를 비교하여 불리언 값을 도출합니다.
 	- `useLocation`: `location.pathname`으로 현재 경로 반환
-	- `URLSearchParams`: `new URLSearchParams(location.search).get`으로 현재 쿼리 파라미터 값 반환
+	- `URLSearchParams`: `new URLSearchParams(location.search).get()`으로 현재 쿼리 파라미터 값 반환
 - 페이지 이동 설정은 react-router-dom의 `Link` 컴포넌트를 활용합니다.
 
 #### 1-2) 내비게이션 우측: 검색 기능
@@ -67,7 +67,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 - API를 호출한 이후 데이터 유무에 따른 렌더링
 	- 데이터가 있으면: 유튜브 컴포넌트를 이용해 예고편 동영상을 렌더링합니다.
 	- 데이터가 없으면: 예고편 정보가 존재하지 않는다는 메세지를 렌더링합니다.
-	- [유튜브 컴포넌트](https://www.npmjs.com/package/react-youtube)에는 API 호출로 받은 데이터의 key값을 전달하면 영상을 찾아와 보여줄 수 있습니다.
+	- [react-youtube](https://www.npmjs.com/package/react-youtube)에는 API 호출로 받은 데이터의 key값을 전달하면 영상을 찾아와 보여줄 수 있습니다.
 
 #### 2-3) MovieSlides: 여러 테마의 영화 리스트 슬라이드
 - 인기 영화, 높은 평점 영화, 개봉 예정 영화, 현재 상영중인 영화 리스트를 보여줍니다.
@@ -86,7 +86,8 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 	- **`useMovieGenreQuery`**: 모든 장르 정보가 저장되어 있는 장르 객체를 가져옵니다.
  	- 특정 영화의 id값과 비교하여 문자열로 변환합니다.
 
-### 3) Movie
+### 3) Movies
+- 영화 리스트 페이지로, 영화를 장르로 필터링하거나 검색 결과를 확인할 수 있습니다.
 - `useSearchParams` 훅을 통해 현재 URL의 검색어(`keyword`) 및 장르 파라미터 값(`genreParam`)을 각각 가져옵니다.
 - 
 
