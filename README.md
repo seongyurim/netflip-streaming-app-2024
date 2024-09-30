@@ -88,8 +88,32 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 
 ### 3) Movies
 - 영화 리스트 페이지로, 영화를 장르로 필터링하거나 검색 결과를 확인할 수 있습니다.
-- `useSearchParams` 훅을 통해 현재 URL의 검색어(`keyword`) 및 장르 파라미터 값(`genreParam`)을 각각 가져옵니다.
-- 
+- `useSearchParams` 훅을 통해 현재 URL에서 검색어(`keyword`)와 장르 파라미터값(`genreParam`)을 각각 가져옵니다.
+- **`useSearchMediaQuery`**: 매개변수에 부합하는 영화 리스트를 가져옵니다.
+	- `keyword`: 사용자가 입력한 검색어
+	- `genre`: 사용자가 선택한 장르 혹은 URL에 명시된 장르
+	- `page`: 영화 리스트의 페이지(20개 기준)
+ - 이 커스텀 훅의 queryFn(`fetchSearchMovie`)에서는 키워드나 장르의 존재 여부에 따라 파라미터와 엔드포인트를 동적으로 설정합니다.
+ - 단, 키워드와 장르 값이 모두 존재하지 않는다면 인기 영화 리스트를 디폴트 리스트로 보여줍니다.
+```
+const fetchSearchMovie = ({ keyword, genre, page }) => {
+  const params = {
+    language: 'ko',
+    page,
+    ...(keyword && { query: keyword }), // 스프레드 연산자를 통해 keyword가 있을 때에만 객체에 추가
+    ...(genre && { with_genres: genre }), // 스프레드 연산자를 통해 genre가 있을 때에만 객체에 추가
+  };
+
+  const endpoint =
+    keyword
+      ? '/search/movie' // 키워드가 있는 경우
+      : genre
+        ? '/discover/movie' // 키워드가 없고, 장르만 있는 경우
+        : '/movie/popular'; // 키워드와 장르가 모두 없는 경우
+
+  return api.get(endpoint, { params });
+};
+```
 
 ### 4) MovieDetail
 ### 5) NotFound
