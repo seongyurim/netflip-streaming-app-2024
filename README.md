@@ -89,7 +89,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 ### 3) Movies
 #### 3-1) 사용자의 요청에 따라 동적 리스트 생성
 - 영화 리스트 페이지로, 영화를 장르로 필터링하거나 검색 결과를 확인할 수 있습니다.
-- `useSearchParams` 훅을 통해 현재 URL에서 검색어(`keyword`)와 장르 파라미터값(`genreParam`)을 각각 가져옵니다.
+- `useSearchParams` 훅을 통해 현재 URL에서 검색어(`keyword`)와 장르 파라미터값(`genreParam`)을 각각 추출합니다.
 - **`useSearchMediaQuery`**: 매개변수에 부합하는 영화 리스트를 가져옵니다.
 	- `keyword`: 사용자가 입력한 검색어
 	- `genre`: 사용자가 선택한 장르 혹은 URL에 명시된 장르
@@ -101,8 +101,8 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
   const params = {
     language: 'ko',
     page,
-    ...(keyword && { query: keyword }), // 스프레드 연산자를 통해 keyword가 있을 때에만 객체에 추가
-    ...(genre && { with_genres: genre }), // 스프레드 연산자를 통해 genre가 있을 때에만 객체에 추가
+    ...(keyword && { query: keyword }), // keyword가 있을 때에만 객체에 추가
+    ...(genre && { with_genres: genre }), // genre가 있을 때에만 객체에 추가
   };
 
   const endpoint =
@@ -116,7 +116,14 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
 };
 ```
 
-#### 3-2) genreSlider
+#### 3-2) GenreSlider
+- GenreSlider는 부모(`MoviePage`)의 상태를 전달받습니다.
+	- `genreData`: 모든 장르의 id, name이 저장되어 있는 객체
+	- `genreResponsive`: 캐러셀이 사용할 장르 슬라이더 전용 반응형 데이터
+	- `selectedGenre`: 선택된 장르를 저장하는 상태
+	- `setSelectedGenre`: 선택된 장르 설정
+ - 장르카드를 클릭하면 `useNavigate`를 통해 URL에 장르값을 반영합니다.
+ - 선택된 장르는 상태에 저장하고 CSS 선택자를 부여하여 UI를 강조합니다.
 
 ### 4) MovieDetail
 ### 5) NotFound
