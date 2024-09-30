@@ -87,6 +87,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
  	- 특정 영화의 id값과 비교하여 문자열로 변환합니다.
 
 ### 3) Movies
+#### 3-1) 사용자의 요청에 따라 동적 리스트 생성
 - 영화 리스트 페이지로, 영화를 장르로 필터링하거나 검색 결과를 확인할 수 있습니다.
 - `useSearchParams` 훅을 통해 현재 URL에서 검색어(`keyword`)와 장르 파라미터값(`genreParam`)을 각각 가져옵니다.
 - **`useSearchMediaQuery`**: 매개변수에 부합하는 영화 리스트를 가져옵니다.
@@ -114,6 +115,8 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
   return api.get(endpoint, { params });
 };
 ```
+
+#### 3-2) genreSlider
 
 ### 4) MovieDetail
 ### 5) NotFound
