@@ -87,5 +87,8 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
  	- 특정 영화의 id값과 비교하여 문자열로 변환합니다.
 
 ### 3) Movie
+- `useSearchParams` 훅을 통해 현재 URL의 검색어(`keyword`) 및 장르 파라미터 값(`genreParam`)을 각각 가져옵니다.
+- 
+
 ### 4) MovieDetail
 ### 5) NotFound
