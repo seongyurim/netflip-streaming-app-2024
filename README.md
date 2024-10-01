@@ -126,7 +126,7 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
 - 선택된 장르는 상태에 저장하고 CSS 선택자를 부여하여 UI를 강조합니다.
 - 장르 슬라이더도 영화 슬라이더와 마찬가지로 react-multi-carousel를 통해 구현합니다.
 
-#### 3-3) Pagenation
+#### 3-3) Pagination
 - 영화 리스트의 페이지네이션은 [react-paginate](https://www.npmjs.com/package/react-paginate)를 사용하여 구현합니다.
 - `page` 상태의 초기값을 1로 설정하고 `onPageChange` 함수를 통해 페이지가 1씩 증가하도록 합니다.
 
