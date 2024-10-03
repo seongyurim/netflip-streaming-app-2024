@@ -131,4 +131,6 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
 - `page` 상태의 초기값을 1로 설정하고 `onPageChange` 함수를 통해 페이지가 1씩 증가하도록 합니다.
 
 ### 4) MovieDetail
+금일내용수정
+
 ### 5) NotFound
