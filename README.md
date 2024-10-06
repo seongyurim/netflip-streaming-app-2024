@@ -160,7 +160,7 @@ const fetchSearchMovie = ({ keyword, genre, page }) => {
 	- 5번을 순회하는 반복문을 만듭니다.
 	- `i`가 `fullStars`보다 작으면: 노란 별을 만들어 `stars`에 추가합니다.
 	- `i`가 `fullStars`와 같고 `hasHalfStar`가 `true`이면: 반은 노랗고 반은 회색인 별을 만들어 `stars`에 추가합니다.
-	- 이외인 경우: 회색 별을 만들어 `stars`에 추가합니다.
+	- 나머지 경우: 회색 별을 만들어 `stars`에 추가합니다.
 	- 이로써 다섯 개의 별을 모두 만들었으니, stars를 반환합니다.
 
 ### 5) NotFound
