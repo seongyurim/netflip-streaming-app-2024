@@ -19,9 +19,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 ## 📍주요기능
 
 ## 📍폴더구성
-<img width="1238" alt="FolderTree" src="https://github.com/user-attachments/assets/59899d07-925e-44c4-9061-7850f25d08a7">
-
-
+<img width="1238" alt="FolderTree" src="https://github.com/user-attachments/assets/13995247-2be3-41f6-9abe-2ed70d41b886">
 
 ## 📍상세기능
 ### 1) Navigation
