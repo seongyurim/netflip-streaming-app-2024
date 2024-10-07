@@ -18,6 +18,10 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 
 ## 📍주요기능
 
+## 📍폴더구성
+<img width="1242" alt="Folder Tree" src="https://github.com/user-attachments/assets/c13e24a6-be9a-4b34-b47b-202f0ccdd0e4">
+
+
 ## 📍상세기능
 ### 1) Navigation
 - 내비게이션은 단일 레이아웃 컴포넌트(`AppLayout`)으로 구성합니다.
