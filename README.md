@@ -104,7 +104,7 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 	- `page`: 영화 리스트의 페이지(20개 기준)
  - 이 커스텀 훅의 queryFn(`fetchSearchMovie`)에서는 키워드나 장르의 존재 여부에 따라 파라미터와 엔드포인트를 동적으로 설정합니다.
  - 단, 키워드와 장르 값이 모두 존재하지 않는다면 인기 영화 리스트를 디폴트 리스트로 보여줍니다.
-```
+```javascript
 const fetchSearchMovie = ({ keyword, genre, page }) => {
   const params = {
     language: 'ko',
