@@ -16,6 +16,9 @@ TMDB 데이터를 활용하여 제작한 넷플릭스 스타일의 영화 소개
 	<img src="https://img.shields.io/badge/API Call-E3695F?style=for-the-badge&logoColor=white"> 
 </div>
 
+## 📍데모 페이지
+<img width="1479" alt="Netflip Demo" src="https://files.cdn.thinkific.com/file_uploads/523761/images/def/742/f6d/1703141411885.png">
+
 ## 📍주요기능
 - **리액트쿼리 기반 서버상태 관리**: 서버에서 데이터를 효율적으로 가져오고, 데이터를 자동으로 캐싱하여 성능을 최적화합니다.
 - **영화 검색 및 필터링**: 사용자가 입력한 키워드 혹은 선택한 장르에 맞는 영화를 실시간으로 찾을 수 있습니다.
